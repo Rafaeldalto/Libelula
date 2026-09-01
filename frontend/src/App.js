@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import "@/App.css";
 import Reveal from "@/components/Reveal";
+import DragonflyMotif from "@/components/DragonflyMotif";
 
 const WORD_LOGO =
   "https://customer-assets-gfyr7b9c.emergentagent.net/job_eb8704de-45d3-4331-8e20-3e9a4d66472b/artifacts/rv8y401m_WhatsApp%20Image%202026-09-01%20at%2009.24.51%20%282%29.jpeg";
@@ -22,6 +23,8 @@ const ROUND_LOGO =
   "https://customer-assets-gfyr7b9c.emergentagent.net/job_eb8704de-45d3-4331-8e20-3e9a4d66472b/artifacts/2hwj8dhf_WhatsApp%20Image%202026-09-01%20at%2009.24.51%20%281%29.jpeg";
 const HERO_IMAGE =
   "https://static.prod-images.emergentagent.com/jobs/eb8704de-45d3-4331-8e20-3e9a4d66472b/images/fe40552b8fe027b360c99a4a9ae8fd060f9e7feb7a29bcd655d4b71d8338fb71.jpeg";
+const TEAM_IMAGE =
+  "https://customer-assets-gfyr7b9c.emergentagent.net/job_eb8704de-45d3-4331-8e20-3e9a4d66472b/artifacts/7k88rncu_WhatsApp%20Image%202026-09-01%20at%2009.24.51.jpeg";
 const WHATSAPP_LINK =
   "https://wa.me/5522997501612?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20o%20Instituto%20Lib%C3%A9lula.";
 const MAP_LINK =
@@ -89,7 +92,10 @@ function Logo({ variant = "word", testId, alt = "Instituto Libélula" }) {
 function Chapter({ number, eyebrow, title, children, dark = false }) {
   return (
     <div className={`chapter-head ${dark ? "chapter-head--dark" : ""}`}>
-      <div className="chapter-number">{number}</div>
+      <div className="chapter-marker">
+        <div className="chapter-number">{number}</div>
+        <DragonflyMotif variant={number} testId={`chapter-${number}-dragonfly`} />
+      </div>
       <div>
         <p className="eyebrow">{eyebrow}</p>
         <h2>{title}</h2>
@@ -376,6 +382,18 @@ function App() {
               <Chapter number="04" eyebrow="Nossa equipe" title="Profissionais que acolhem histórias">
                 Nomes apresentados pelo Instituto. Informações de profissão, especialidade, foto e registro profissional serão atualizadas quando confirmadas.
               </Chapter>
+            </Reveal>
+            <Reveal className="team-feature" delay={100}>
+              <figure className="team-feature-media">
+                <img src={TEAM_IMAGE} alt="Imagem enviada pelo Instituto Libélula apresentando as profissionais da equipe" data-testid="team-feature-image" />
+                <figcaption><span className="status-dot" /> Material enviado pelo Instituto · nomes apresentados</figcaption>
+              </figure>
+              <div className="team-feature-copy">
+                <p className="eyebrow">Pessoas que fazem o cuidado</p>
+                <p className="large-copy">Cada nome carrega uma história de acolhimento.</p>
+                <p>Esta imagem enviada pelo Instituto apresenta parte da equipe e ajuda a aproximar famílias de quem estará presente no caminho terapêutico.</p>
+                <p className="team-feature-note"><span className="status-dot" /> Profissões, especialidades e registros serão confirmados na próxima etapa.</p>
+              </div>
             </Reveal>
             <div className="team-grid">
               {teamNames.map((name, index) => (

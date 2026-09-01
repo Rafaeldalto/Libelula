@@ -487,6 +487,13 @@
   align-items: start;
 }
 
+.chapter-marker {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .chapter-number {
   padding-top: 8px;
   color: var(--turquoise);
@@ -1005,6 +1012,62 @@
 .team-section .section-inner {
   padding-top: 132px;
   padding-bottom: 130px;
+}
+
+.team-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.93fr) minmax(280px, 1.07fr);
+  gap: clamp(38px, 8vw, 110px);
+  align-items: center;
+  margin-top: 78px;
+}
+
+.team-feature-media {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 24px 24px 24px 58px;
+  background: var(--surface);
+  box-shadow: 18px 20px 0 rgba(0, 168, 150, 0.13), 0 22px 48px rgba(12, 35, 102, 0.11);
+  transform: rotate(-1.3deg);
+}
+
+.team-feature-media img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 50%;
+  border-radius: 15px 15px 15px 46px;
+}
+
+.team-feature-media figcaption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 5px 1px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+.team-feature-copy {
+  max-width: 460px;
+}
+
+.team-feature-copy > p:not(.large-copy):not(.eyebrow):not(.team-feature-note) {
+  margin: 21px 0 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.team-feature-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
 }
 
 .team-grid {
@@ -1813,6 +1876,7 @@
   .attention-grid,
   .steps-grid,
   .team-grid,
+  .team-feature,
   .space-grid,
   .footer-inner {
     grid-template-columns: 1fr;
@@ -1971,5 +2035,63 @@
 
   .marquee-track {
     animation: none;
+  }
+}
+
+
+.dragonfly-motif {
+  width: 54px;
+  height: 54px;
+  overflow: visible;
+  transform-origin: center;
+  animation: dragonfly-arrive 850ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.chapter-marker:hover .dragonfly-motif {
+  transform: translateY(-4px) rotate(-4deg);
+}
+
+.chapter-marker:hover .dragonfly-wings {
+  animation: wing-hover 1.45s ease-in-out infinite;
+  transform-origin: 40px 40px;
+}
+
+@keyframes dragonfly-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(10px) rotate(-8deg) scale(0.86);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0) scale(1);
+  }
+}
+
+@keyframes wing-hover {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(2deg) scale(1.025);
+  }
+}
+
+@media (max-width: 570px) {
+  .chapter-marker {
+    gap: 14px;
+  }
+
+  .dragonfly-motif {
+    width: 39px;
+    height: 39px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dragonfly-motif,
+  .chapter-marker:hover .dragonfly-wings {
+    animation: none;
+    transition: none;
   }
 }

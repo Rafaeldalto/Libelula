@@ -23,8 +23,9 @@ Uma página institucional React responsiva, sem banco de dados ou autenticação
 ## Implementado — 2026-09-01
 - Página completa com direção editorial azul royal, turquesa, lilás e amarelo acolhedor.
 - Hero com revelação por linhas, imagem conceitual gerada e logo fornecido pelo Instituto.
+- Motivo recorrente de libélulas coloridas em cada capítulo, com entrada suave, hover flutuante e suporte a redução de movimento.
 - Marquee editorial, capítulos numerados, cards assimétricos, caminho multidisciplinar e quatro passos.
-- Especialidades, áreas de atenção, equipe com nomes aprovados e campos profissionais pendentes.
+- Especialidades, áreas de atenção, equipe com imagem enviada, nomes aprovados e campos profissionais pendentes.
 - Galeria de placeholders para fachada, recepção, salas, espaço terapêutico e área infantil.
 - Nota Google 5,0 com 19 avaliações, endereço e links externos.
 - WhatsApp com o número informado e aviso de confirmação oficial; Instagram e Google Maps configurados.
