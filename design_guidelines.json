@@ -1,0 +1,232 @@
+{
+  "project_name": "Instituto Libélula - Espaço Terapêutico Multidisciplinar",
+  "location": "Araruama, Região dos Lagos - RJ",
+  "brand_essence": {
+    "slogan": "O amor é a asa que nos leva à inclusão",
+    "mission": "Espaço terapêutico multidisciplinar humanizado de excelência neurodivergente e desenvolvimento infantil, unindo ciência rigorosa, acolhimento familiar e afeto transformador.",
+    "emotional_archetype": "Organic & Earthy + High-Contrast Swiss Editorial Fusion (Afeto Sensorial + Autoridade Clínica Acolhedora)",
+    "design_tone": "Editorial, autoral, cinematográfico, caloroso, livre de clichês médicos corporativos ou templates genéricos infantis."
+  },
+  "typography": {
+    "rule": "Máximo de 2 famílias tipográficas com forte personalidade e alto índice de legibilidade/acessibilidade APCA.",
+    "primary_display_heading": {
+      "family": "Plus Jakarta Sans",
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap",
+      "weights": ["600 (Semi-Bold)", "700 (Bold)", "800 (Extra-Bold)"],
+      "usage": "Títulos H1, H2, H3, números de capítulos (01, 02...), citações de destaque e badges editoriais.",
+      "letter_spacing": "tracking-tight (-0.02em a -0.04em em tamanhos display)",
+      "banned_fonts": ["Inter para H1/H2", "Roboto", "Comic Sans", "Open Sans"]
+    },
+    "body_and_ui": {
+      "family": "IBM Plex Sans",
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap",
+      "weights": ["400 (Regular)", "500 (Medium)", "600 (Semi-Bold)"],
+      "usage": "Parágrafos, legendas, microcopy, botões de ação, itens de navegação, formulários e notas clínicas.",
+      "line_height": "leading-relaxed (1.6 a 1.75 para máxima legibilidade neurodivergente)"
+    },
+    "scale_hierarchy": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] max-w-4xl",
+      "h2_chapter_title": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-libelula-royal",
+      "h3_card_title": "text-xl sm:text-2xl font-bold text-libelula-royal",
+      "h4_subheading": "text-lg sm:text-xl font-semibold",
+      "body_lead": "text-lg sm:text-xl font-normal leading-relaxed text-slate-700",
+      "body_regular": "text-base leading-relaxed text-slate-600",
+      "caption_overline": "text-xs font-bold uppercase tracking-[0.25em] text-libelula-turquoise"
+    }
+  },
+  "color_system": {
+    "philosophy": "5 Papéis Semânticos CSS estritos baseados na identidade do Instituto Libélula (Azul Royal, Lilás Suave, Turquesa, Amarelo Solar e Canvas Acolhedor). Sem gradientes estéreis em tela cheia; contraste rigoroso WCAG AA / APCA.",
+    "css_roles": [
+      {
+        "role_name": "--libelula-royal (Azul Royal Profundo)",
+        "hex": "#0C2366",
+        "hsl": "224, 79%, 22%",
+        "tailwind_class": "bg-libelula-royal / text-libelula-royal / border-libelula-royal",
+        "purpose": "Âncora primária de contraste e autoridade. Utilizado para toda a hierarquia de títulos, textos de alta legibilidade, elementos estruturais nobres e estados ativos profundos."
+      },
+      {
+        "role_name": "--libelula-lilac (Lilás & Rosa Sensorial Suave)",
+        "hex": "#EDE6F7",
+        "hsl": "266, 50%, 93%",
+        "tailwind_class": "bg-libelula-lilac / text-libelula-lilac / border-libelula-lilac",
+        "purpose": "Acolhimento neurodivergente, superfícies de repouso visual, cartões de sensibilidade tátil e detalhes afetuosos que quebram a frieza hospitalar."
+      },
+      {
+        "role_name": "--libelula-turquoise (Turquesa Vivo / Asas da Libélula)",
+        "hex": "#00A896",
+        "hsl": "174, 100%, 33%",
+        "tailwind_class": "bg-libelula-turquoise / text-libelula-turquoise / border-libelula-turquoise",
+        "purpose": "Energia do movimento, estímulo psicomotor e fonoaudiológico, indicadores de progresso, ícones de foco e detalhes das asas em movimento."
+      },
+      {
+        "role_name": "--libelula-warm-yellow (Amarelo Acolhedor / Luz Solar)",
+        "hex": "#FFB703",
+        "hsl": "43, 100%, 51%",
+        "tailwind_class": "bg-libelula-yellow / text-libelula-yellow / border-libelula-yellow",
+        "purpose": "O afeto que impulsiona. Botões de ação prioritária (CTAs de agendamento e acolhimento), badges de destaque caloroso e realces emocionais."
+      },
+      {
+        "role_name": "--libelula-canvas (Canvas Off-White Acolhedor)",
+        "hex": "#FAF8F5",
+        "hsl": "36, 33%, 97%",
+        "tailwind_class": "bg-libelula-canvas / text-libelula-canvas",
+        "purpose": "Fundo estrutural anti-fadiga visual. Substitui o branco puro hospitalar por um tom mineral macio, reduzindo sobrecarga sensorial para pacientes e familiares."
+      }
+    ],
+    "supporting_neutrals": {
+      "dark_slate": "#1E293B",
+      "border_soft": "rgba(12, 35, 102, 0.10)",
+      "glass_stroke": "rgba(255, 255, 255, 0.70)",
+      "card_surface": "#FFFFFF"
+    }
+  },
+  "layout_and_grids": {
+    "concept": "Tetris Editorial Grid + Ritmo Assimétrico e Capítulos Numerados",
+    "spacing_philosophy": "Escala generosa 2x-3x. Seções principais com 'py-24' a 'py-32'. Containers com borda possuem padding interno obrigatório 'p-8' a 'p-12'.",
+    "chapter_architecture": [
+      {
+        "chapter": "00. Hero Cinético",
+        "title": "Acolhimento Terapêutico & Asas para o Futuro",
+        "layout_style": "Hero assimétrico com tipografia cinética em linhas reveladas, citação bordada em badge 'O amor é a asa que nos leva à inclusão', moldura recortada com foto real/terapêutica e CTA tátil em Amarelo Solar."
+      },
+      {
+        "chapter": "01. O Espaço & Propósito",
+        "title": "Um refúgio sensorial no coração de Araruama",
+        "layout_style": "Bento Grid Tetris com 3 blocos irregulares: 1 card dominante (col-span-8) apresentando o conceito do espaço, 1 bloco vertical (col-span-4) com o manifesto ético e 1 micro-widget com a frase manifesto da marca."
+      },
+      {
+        "chapter": "02. As Asas do Cuidado (Especialidades)",
+        "title": "Equipe Multidisciplinar Integrada",
+        "layout_style": "Grid editorial com abas e cartões de cantos esculpidos (rounded-[2rem]) detalhando ABA / Análise do Comportamento, Terapia Ocupacional & Integração Sensorial, Fonoaudiologia, Psicologia, Psicomotricidade, Psicopedagogia e Orientação Parental."
+      },
+      {
+        "chapter": "03. Metodologia & Afeto",
+        "title": "A Ciência Guiada pelo Vínculo Humano",
+        "layout_style": "Linha do tempo interativa e scrollytelling suave com 4 etapas: Acolhimento Inicial, Avaliação Transdisciplinar, Plano Terapêutico Individualizado (PTI) e Conexão Família-Escola-Clínica."
+      },
+      {
+        "chapter": "04. Araruama & Raízes",
+        "title": "Pertencimento e Acessibilidade na Região dos Lagos",
+        "layout_style": "Grid de localização e infraestrutura acolhedora: mapa estilizado de alta acessibilidade, fotos reais da unidade com molduras geométricas orgânicas e horário de atendimento humanizado."
+      },
+      {
+        "chapter": "05. Diálogo Aberto & Agendamento",
+        "title": "Inicie a Jornada do Seu Filho Conosco",
+        "layout_style": "Formulário de primeiro contato estruturado com componentes Shadcn customizados (Select, Input, Textarea), botão de WhatsApp direto e selo de confidencialidade médica/LGPD."
+      }
+    ],
+    "marquee_ribbon": {
+      "type": "The Editorial Ribbon (react-fast-marquee)",
+      "styling": "py-6 bg-libelula-royal text-libelula-canvas border-y border-libelula-turquoise/20 font-serif tracking-widest text-sm uppercase flex items-center gap-16",
+      "items": [
+        "O amor é a asa que nos leva à inclusão",
+        "•",
+        "Intervenção Precoce & Baseada em Evidências",
+        "•",
+        "Integração Sensorial Ayres",
+        "•",
+        "Araruama - RJ",
+        "•",
+        "Cuidado Centrado na Família",
+        "•",
+        "Ambiente Terapêutico Neuroafirmativo"
+      ],
+      "speed": 28
+    }
+  },
+  "header_behavior": {
+    "type": "Crystal Glassmorphism Sticky Floating Nav",
+    "classes": "fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-xl bg-white/85 dark:bg-[#0C2366]/90 border-b border-libelula-royal/10 shadow-sm",
+    "rules": [
+      "NUNCA utilizar fundo 100% transparente sobre o conteúdo ou imagens (garante legibilidade máxima).",
+      "Logo do Instituto Libélula à esquerda com ilustração vetorial da asa/borboleta.",
+      "Links de navegação visíveis no desktop: Capítulos (O Espaço, Especialidades, Metodologia, Araruama, Contato).",
+      "Botão de Ação Primária à direita: 'Agendar Acolhimento' em Amarelo Solar (#FFB703) com hover luminoso.",
+      "Mobile: Menu gaveta lateral (Sheet) com links acessíveis em toque grande (mínimo 48px de altura) e data-testid."
+    ]
+  },
+  "image_treatment_protocol": {
+    "philosophy": "Molduras recortadas e orgânicas que remetem à leveza das asas da libélula, combinadas com respeito ético e placeholders auditados.",
+    "rules": [
+      "Imagens Reais vs Conceituais: Tratamento com raio de curvatura diferenciado ('rounded-[2.5rem]' ou máscara SVG orgânica).",
+      "Proteção de Contraste: Overlays com gradiente direcional suave ('bg-gradient-to-t from-libelula-royal/70 via-transparent to-transparent') apenas quando houver texto sobreposto.",
+      "Audit & Placeholders: Toda imagem não confirmada ou dado pendente DEVE exibir um badge claro como '[PENDENTE: Foto Real da Sala de Integração Sensorial - Araruama]'.",
+      "Sem falsas declarações clínicas ou fotos de banco que descaracterizem a equipe local."
+    ]
+  },
+  "curated_media_assets": [
+    {
+      "category": "Hero / Capítulo 01 - Afeto & Equilíbrio",
+      "description": "Terapeuta e criança em sessão de equilíbrio e estimulação lúdica motora",
+      "image_url": "https://images.unsplash.com/photo-1685362158423-abf004b858d2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxjaGlsZCUyMHRoZXJhcHklMjBzZW5zb3J5JTIwYXV0aXNtfGVufDB8fHx8MTc4ODI2NTk3MHww&ixlib=rb-4.1.0&q=85",
+      "suggested_frame": "Moldura recortada com borda arredondada 'rounded-[3rem]' e sombra difusa âmbar/azul"
+    },
+    {
+      "category": "Capítulo 02 - Estímulo Sensorial & Liberdade",
+      "description": "Criança explorando ambiente sensorial dinâmico e alegre",
+      "image_url": "https://images.unsplash.com/photo-1597997208676-9379288f671e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxjaGlsZCUyMHRoZXJhcHklMjBzZW5zb3J5JTIwYXV0aXNtfGVufDB8fHx8MTc4ODI2NTk3MHww&ixlib=rb-4.1.0&q=85",
+      "suggested_frame": "Recorte vertical assimétrico (col-span-4 row-span-2) com detalhes em lilás suave"
+    },
+    {
+      "category": "Capítulo 03 - Espaço Multidisciplinar Acolhedor",
+      "description": "Terapeuta pediátrica interagindo com paciente em ambiente adaptado",
+      "image_url": "https://images.unsplash.com/photo-1709127347884-a106974ef58d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxwZWRpYXRyaWMlMjBvY2N1cGF0aW9uYWwlMjB0aGVyYXB5JTIwcGxheXxlbnwwfHx8fDE3ODgyNjU5NzF8MA&ixlib=rb-4.1.0&q=85",
+      "suggested_frame": "Card largo com moldura dupla em linha turquesa 1px"
+    },
+    {
+      "category": "Capítulo 03 - Psicomotricidade & Habilidades Motoras",
+      "description": "Atividade de coordenação motora fina e suporte individualizado",
+      "image_url": "https://images.unsplash.com/photo-1708686816818-2b018e0c1296?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxwZWRpYXRyaWMlMjBvY2N1cGF0aW9uYWwlMjB0aGVyYXB5JTIwcGxheXxlbnwwfHx8fDE3ODgyNjU5NzF8MA&ixlib=rb-4.1.0&q=85",
+      "suggested_frame": "Moldura de canto chanfrado orgânico com tag de especialidade 'Psicomotricidade'"
+    },
+    {
+      "category": "Conceitual / Asas da Inclusão",
+      "description": "Detalhe macro das asas translúcidas e geométricas da libélula em tons turquesa e azul",
+      "image_url": "https://images.unsplash.com/photo-1718647507338-4dc7b6e6ff86?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxkcmFnb25mbHklMjBtYWNybyUyMHdpbmdzJTIwbmF0dXJlfGVufDB8fHx8MTc4ODI2NTk4MHww&ixlib=rb-4.1.0&q=85",
+      "suggested_frame": "Fundo sutil com máscara circular recortada e desfoque suave para destacar o manifesto"
+    },
+    {
+      "category": "Capítulo 04 - Desenvolvimento Pedagógico e Estrutura",
+      "description": "Criança focada no aprendizado através do brincar estruturado",
+      "image_url": "https://images.unsplash.com/photo-1495900593237-22dc861b231d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxjaGlsZCUyMHRoZXJhcHklMjBzZW5zb3J5JTIwYXV0aXNtfGVufDB8fHx8MTc4ODI2NTk3MHww&ixlib=rb-4.1.0&q=85",
+      "suggested_frame": "Card assimétrico com badge '[Unidade Araruama / Integração Família]'"
+    }
+  ],
+  "motion_and_microinteractions": {
+    "engine": "Framer Motion + CSS Hardware Accelerated Transitions",
+    "kinetic_hero_lines": {
+      "strategy": "Revelação por linhas (Line-by-line reveal) com container 'overflow-hidden' e texto subindo de 'y: 100%' para 'y: 0%' com stagger de 0.12s e curva suave 'cubic-bezier(0.16, 1, 0.3, 1)'."
+    },
+    "interactive_elements": {
+      "buttons": "Hover com leve elevação ('-translate-y-0.5'), pulso de luz sutil no botão Amarelo Solar e expansão do ícone de seta.",
+      "cards": "Ao passar o mouse, a borda translúcida ganha iluminação suave em Turquesa (#00A896) e escala sutil 'scale-[1.01]'.",
+      "reduced_motion": "Suporte obrigatório a 'prefers-reduced-motion': desabilitar deslocamentos cinéticos e manter transições por opacidade instantânea."
+    }
+  },
+  "accessibility_and_compliance": {
+    "wcag_target": "WCAG 2.1 AA e conformidade APCA para texto longo",
+    "color_blind_support": "Contraste assegurado por diferenciação de luminância e não apenas matiz (Azul Royal #0C2366 oferece contraste 11:1 contra o Canvas #FAF8F5).",
+    "data_test_ids": "Todos os botões, links, inputs de formulário, cards de capítulos e modais DEVEM conter atributos 'data-testid' com padrão kebab-case (ex: data-testid='cta-agendar-hero', data-testid='chapter-02-card-fono', data-testid='form-input-nome').",
+    "clinical_integrity": "Proibido inventar dados de registro médico ou afirmações falsas de 'cura'. Manter foco em desenvolvimento neurodivergente, autonomia, suporte familiar e evidência científica."
+  },
+  "instructions_to_main_agent": [
+    "1. Adicionar fontes 'Plus Jakarta Sans' e 'IBM Plex Sans' no index.html e configurar no tailwind.config.js.",
+    "2. Declarar as 5 variáveis de cor em :root no src/index.css e integrá-las no tema do Tailwind.",
+    "3. Construir o Hero cinético com o slogan 'O amor é a asa que nos leva à inclusão' e a animação de revelação por linhas com Framer Motion.",
+    "4. Criar a estrutura em 5 capítulos numerados (01. O Espaço, 02. As Asas do Cuidado, 03. Metodologia & Afeto, 04. Araruama & Raízes, 05. Diálogo Aberto).",
+    "5. Implementar o Marquee Ribbon editorial lento utilizando 'react-fast-marquee' ou componente CSS animado.",
+    "6. Utilizar as imagens curadas do Unsplash fornecidas no JSON com molduras recortadas ('rounded-[2.5rem]') e tags claras de placeholder auditado para itens pendentes da clínica.",
+    "7. Garantir cabeçalho com Crystal Glassmorphism e nunca com fundo transparente simples.",
+    "8. Todos os componentes interativos devem possuir 'data-testid' sem exceção."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
+    "anti_ai_rules": [
+      "Evitar layouts centralizados genéricos e gradientes padrão de IA.",
+      "Utilizar assimetria e o grid Tetris suíço para criar tensão e interesse visual.",
+      "Espaçamento generoso (2x-3x): nunca amontoar textos contra bordas de cartões.",
+      "Não utilizar emojis de assistente de IA (🤖🧠💡🔮) nos ícones; utilizar Lucide Icons com traço fino e elegante."
+    ],
+    "toast_notifications": "Utilizar 'sonner' para confirmações de formulário e agendamento.",
+    "file_type": "O projeto utiliza arquivos .js e .jsx (React 19 + Tailwind CSS + Framer Motion)."
+  }
+}
